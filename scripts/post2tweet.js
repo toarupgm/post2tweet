@@ -37,23 +37,10 @@ const obs = new MutationObserver(function(mutations,obs){
             tweetbtn_inline.innerText = "ツイートする";
         }
 
-        var main = e.querySelector('main')
-        if(main)
+        var draft_placeholder = e.querySelector('div.public-DraftEditorPlaceholder-inner');
+        if(draft_placeholder)
         {
-            const obs = new MutationObserver(function(mutations,obs){
-                for(const m of mutations) {
-                    if(main_n==0){
-                        var e = m.target;
-                        var draft_placeholder = e.querySelector('div.public-DraftEditorPlaceholder-inner');
-                        if(draft_placeholder)
-                        {
-                            draft_placeholder.innerText = "返信をツイート";
-                        }
-                        main_n++;
-                    }
-                }
-            });
-            obs.observe(main,{childList:true,subtree:true});
+            draft_placeholder.innerText = "返信をツイート";
         }
     }
 });
