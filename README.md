@@ -1,6 +1,6 @@
 # post2tweet
 
-post2tweet is a Chrome extension that change "post" to "tweets".
+post2tweet is a Chrome extension that change from "post" to "tweets".
 
 ## Installation
 
