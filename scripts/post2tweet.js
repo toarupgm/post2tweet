@@ -42,6 +42,11 @@ const obs = new MutationObserver(function(mutations,obs){
         {
             draft_placeholder.innerText = "返信をツイート";
         }
+        var timeline = e.querySelector('[aria-label="ホームタイムライン"] div > h2 > span');
+        if(timeline)
+        {
+            timeline.innerText = "ツイート";
+        }
     }
 });
 obs.observe(base,{childList:true,subtree:true});
